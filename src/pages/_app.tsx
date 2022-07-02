@@ -1,14 +1,15 @@
 import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Flex } from "@chakra-ui/react";
 
 import SideBar from "../components/SideBar";
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <SideBar />
-      <Component {...pageProps} />
+      <Flex flexDir={{ base: 'column', md: 'row' }}>
+        <SideBar />
+        <Component {...pageProps} />
+      </Flex>
     </ChakraProvider>
   );
 }
