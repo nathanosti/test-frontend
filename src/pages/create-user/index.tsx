@@ -13,18 +13,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Flex
-        width="100%"
-        flexDir="column"
-        alignItems="center"
-      >
-        <Text 
+      <Flex width="100%" flexDir="column" alignItems="center">
+        <Text
           textAlign="center"
           mt={50}
           mb={100}
           fontWeight="bold"
           fontSize={32}
           casing="capitalize"
+          color="#38A169"
         >
           cadastrar novo cliente
         </Text>
