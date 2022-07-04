@@ -9,7 +9,7 @@ import { useUser } from "../../context/userContext";
 
 export default function CreateUserForm() {
   const { createNewUser } = useUser();
-  const { nextStep, prevStep, setStep, activeStep } = useSteps({
+  const { nextStep, prevStep, activeStep } = useSteps({
     initialStep: 0,
   });
   const steps = [1, 2, 3];
@@ -29,7 +29,7 @@ export default function CreateUserForm() {
   function onSubmit(values: FieldValues) {
     const tempUserData = {
       firstName: values.firstName,
-      lastName: values.firstName,
+      lastName: values.lastName,
       email: values.email,
       phone: values.phone,
       address: {
@@ -94,7 +94,7 @@ export default function CreateUserForm() {
   return (
     <>
       <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onSubmit={methods.handleSubmit(onSubmit)} autoComplete="false">
           <Flex
             flexDir="column"
             p={20}
