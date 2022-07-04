@@ -7,8 +7,8 @@ import {
   FormErrorMessage,
 } from "@chakra-ui/react";
 import inputMask from "react-input-mask";
-import { InputsArrProps } from "../../types/InputsTypes";
-import { Step02InputsArr } from "./InputsArr";
+import { InputsArrProps } from "../../../types/InputsTypes";
+import { Step02InputsArr } from "../InputsArr";
 
 export default function Step02() {
   const {

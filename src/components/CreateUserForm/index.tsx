@@ -2,10 +2,7 @@ import { useForm, FormProvider, FieldValues } from "react-hook-form";
 import { Flex, Button } from "@chakra-ui/react";
 import { Step, Steps, useSteps } from "chakra-ui-steps";
 
-import Step01 from "./Step01";
-import Step02 from "./Step02";
-import Step03 from "./Step03";
-import Step04 from "./Step04";
+import { Step01, Step02, Step03, Step04 } from "./steps";
 
 export default function CreateUserForm() {
   const { nextStep, prevStep, activeStep } = useSteps({
