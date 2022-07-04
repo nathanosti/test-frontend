@@ -1,16 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import CreateUserForm from "../../components/CreateUserForm";
+
 const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Ventura Labs - Test</title>
-        <meta name="description" content="Ventura Labs Front-end Test" />
+        <title>Ventura Labas - Criar Usuário</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Index</h1>
+      <CreateUserForm />
     </div>
   );
 };
