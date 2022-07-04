@@ -1,6 +1,6 @@
 import { InputsArrProps } from "../../types/InputsTypes";
 
-const Step01InputsArr: InputsArrProps = [
+const Step01InputsArr: InputsArrProps[] = [
   {
     inputName: "firstName",
     label: "Primeiro nome",
