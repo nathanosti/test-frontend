@@ -2,10 +2,10 @@ import { Link, Flex, Icon } from "@chakra-ui/react";
 import { NavItemProps } from "../../types/SideBarTypes";
 
 
-export default function NavItem({ icon, children, ...rest }: NavItemProps) {
+export default function NavItem({ icon, href, children, ...rest }: NavItemProps) {
   return (
     <Link
-      href="#"
+      href={href}
       style={{ textDecoration: "none" }}
       _focus={{ boxShadow: "none" }}
     >

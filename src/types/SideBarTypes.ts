@@ -3,6 +3,7 @@ import { IconType } from "react-icons";
 
 export interface LinkItemProps {
   name: string;
+  href: string;
   icon: IconType;
 }
 
@@ -12,6 +13,7 @@ export interface SidebarProps extends BoxProps {
 
 export interface NavItemProps extends FlexProps {
   icon: IconType;
+  href: string;
   children: any;
 }
 
