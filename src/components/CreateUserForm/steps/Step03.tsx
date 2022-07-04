@@ -31,7 +31,7 @@ export default function Step03() {
           <FormControl key={inputName} _invalid={errors[inputName]}>
             <FormLabel htmlFor={inputName}>{label}</FormLabel>
             <InputGroup>
-              {inputName === "salary" && <InputLeftAddon children="R$" />}
+              {inputName === "salary" && <InputLeftAddon>R$</InputLeftAddon>}
               <Input
                 type={inputName === "birthDate" ? "date" : "text"}
                 as={mask ? inputMask : Input}
