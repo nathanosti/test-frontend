@@ -41,20 +41,6 @@ export default function Step01() {
           </FormControl>
         )
       )}
-      {/* <FormControl isInvalid={errors.firstName}>
-        <FormLabel htmlFor="firstName">Primeiro Nome:</FormLabel>
-        <Input
-          id="firstName"
-          placeholder="Digite seu primeiro nome"
-          {...register("firstName", {
-            required: "Obrigatorio",
-            minLength: { value: 4, message: "Digite no minimo 4 caracteres" },
-          })}
-        />
-        <FormErrorMessage>
-          {errors.firstName && errors.firstName.message}
-        </FormErrorMessage>
-      </FormControl> */}
     </Flex>
   );
 }
