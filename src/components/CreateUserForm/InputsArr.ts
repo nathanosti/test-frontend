@@ -37,10 +37,80 @@ const Step01InputsArr: InputsArrProps[] = [
     placeHolder: "Celular",
     validations: {
       required: "Obrigatorio",
-      maxLength: { value: 16, message: "Digite no máximo 14 caracteres" },
     },
     mask: "(99) 9 9999-9999",
   },
+];
+
+export const Step02InputsArr: InputsArrProps[] = [
+  {
+    inputName: "cep",
+    label: "CEP",
+    placeHolder: "Digite o CEP",
+    validations: {
+      required: "Obrigatorio",
+    },
+    mask: "99999-999",
+  },
+  {
+    inputName: "state",
+    label: "Digite o Estado",
+    placeHolder: "Estado",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+  {
+    inputName: "city",
+    label: "Digite a Cidade",
+    placeHolder: "Digite a sua cidade",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+  {
+    inputName: "street",
+    label: "Digite a Rua",
+    placeHolder: "Digite a rua",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+  {
+    inputName: "houseNumber",
+    label: "Número da casa",
+    placeHolder: "Digite o N° da casa",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+];
+
+export const Step03InputsArr: InputsArrProps[] = [
+  {
+    inputName: "birthDate",
+    label: "Data de Nascimento",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+  {
+    inputName: "cpf",
+    label: "CPF",
+    placeHolder: "Digite seu CPF",
+    validations: {
+      required: "Obrigatorio",
+    },
+    mask: "999.999.999-99"
+  },
+  {
+    inputName: "salary",
+    label: "Renda mensal",
+    placeHolder: "Digite a sua renda mensal",
+    validations: {
+      required: "Obrigatorio",
+    },
+  }
 ];
 
 export { Step01InputsArr };
