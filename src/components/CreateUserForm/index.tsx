@@ -1,20 +1,58 @@
 import { useForm, FormProvider, FieldValues } from "react-hook-form";
 import { Flex, Button } from "@chakra-ui/react";
 import { Step, Steps, useSteps } from "chakra-ui-steps";
+import { toast, ToastOptions } from "react-toastify";
 
 import { Step01, Step02, Step03, Step04 } from "./steps";
 
+import { useUser } from "../../context/userContext";
+
 export default function CreateUserForm() {
-  const { nextStep, prevStep, activeStep } = useSteps({
+  const { createNewUser } = useUser();
+  const { nextStep, prevStep, setStep, activeStep } = useSteps({
     initialStep: 0,
   });
   const steps = [1, 2, 3];
 
   const methods = useForm();
 
+  const toastConfig: ToastOptions = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  };
+
   function onSubmit(values: FieldValues) {
-    console.log({ values });
-    nextStep();
+    const tempUserData = {
+      firstName: values.firstName,
+      lastName: values.firstName,
+      email: values.email,
+      phone: values.phone,
+      address: {
+        cep: values.cep,
+        state: values.state,
+        city: values.city,
+        district: values.district,
+        street: values.street,
+        houseNumber: values.houseNumber,
+      },
+      birthDate: values.birthDate,
+      cpf: values.cpf,
+      salary: values.salary,
+    };
+
+    if (activeStep !== 2) {
+      nextStep();
+    } else {
+      createNewUser(tempUserData);
+
+      toast.success("Usuário cadastrado com sucesso", toastConfig);
+      nextStep();
+    }
   }
 
   function handleShowCurrentStep() {
@@ -67,8 +105,8 @@ export default function CreateUserForm() {
           >
             {activeStep !== 3 && (
               <Steps activeStep={activeStep} responsive={false}>
-                {steps.map(() => (
-                  <Step mb={10} />
+                {steps.map((item) => (
+                  <Step key={item} mb={10} />
                 ))}
               </Steps>
             )}

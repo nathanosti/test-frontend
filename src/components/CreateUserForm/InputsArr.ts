@@ -69,6 +69,14 @@ export const Step02InputsArr: InputsArrProps[] = [
     },
   },
   {
+    inputName: "district",
+    label: "Digite o Bairro",
+    placeHolder: "Digite o seu Bairro",
+    validations: {
+      required: "Obrigatorio",
+    },
+  },
+  {
     inputName: "street",
     label: "Digite a Rua",
     placeHolder: "Digite a rua",
@@ -101,7 +109,7 @@ export const Step03InputsArr: InputsArrProps[] = [
     validations: {
       required: "Obrigatorio",
     },
-    mask: "999.999.999-99"
+    mask: "999.999.999-99",
   },
   {
     inputName: "salary",
@@ -110,7 +118,7 @@ export const Step03InputsArr: InputsArrProps[] = [
     validations: {
       required: "Obrigatorio",
     },
-  }
+  },
 ];
 
 export { Step01InputsArr };

@@ -3,12 +3,11 @@ import Head from "next/head";
 
 import { Flex, Text } from "@chakra-ui/react";
 
-import CreateUserForm from "../../components/CreateUserForm";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useUser } from "../../context/userContext";
 
 const Home: NextPage = () => {
+  const { usersList } = useUser();
+  
   return (
     <>
       <Head>
@@ -26,22 +25,9 @@ const Home: NextPage = () => {
           casing="capitalize"
           color="#38A169"
         >
-          cadastrar novo cliente
+          lista de todos nossos clientes
         </Text>
-        <CreateUserForm />
       </Flex>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <ToastContainer />
     </>
   );
 };

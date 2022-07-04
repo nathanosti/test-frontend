@@ -4,6 +4,8 @@ import { StepsStyleConfig as Steps } from "chakra-ui-steps";
 
 import SideBar from "../components/SideBar";
 
+import UserProvider from "../context/userContext";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = extendTheme({
     components: {
@@ -13,10 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Flex flexDir={{ base: "column", md: "row" }}>
-        <SideBar />
-        <Component {...pageProps} />
-      </Flex>
+      <UserProvider>
+        <Flex flexDir={{ base: "column", md: "row" }}>
+          <SideBar />
+          <Component {...pageProps} />
+        </Flex>
+      </UserProvider>
     </ChakraProvider>
   );
 }
