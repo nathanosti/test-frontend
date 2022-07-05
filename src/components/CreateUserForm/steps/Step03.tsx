@@ -34,12 +34,6 @@ export default function Step03() {
           >
             <FormLabel htmlFor={inputName}>{label}</FormLabel>
             <InputGroup>
-              {inputName === "salary" && (
-                <InputLeftAddon>children=</InputLeftAddon>
-              )}
-              <FormLabel htmlFor={inputName}>{label}</FormLabel>
-            </InputGroup>
-            <InputGroup>
               {inputName === "salary" && <InputLeftAddon>R$</InputLeftAddon>}
               <Input
                 type={inputName === "birthDate" ? "date" : "text"}

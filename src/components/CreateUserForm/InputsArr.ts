@@ -117,6 +117,10 @@ export const Step03InputsArr: InputsArrProps[] = [
     placeHolder: "Digite a sua renda mensal",
     validations: {
       required: "Obrigatorio",
+      pattern: {
+        value: /^[0-9]+$/,
+        message: 'Digite apenas números'
+      }
     },
   },
 ];
