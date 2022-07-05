@@ -7,16 +7,14 @@ import {
 } from "@chakra-ui/react";
 import { FiUsers } from "react-icons/fi";
 import { BiUserPlus } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
 
 import NavItem from "./NavItem";
 
 import { LinkItemProps, SidebarProps } from "../../types/SideBarTypes";
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Home", href: "/", icon: AiOutlineHome },
   { name: "Novo Cliente", href: "/create-user", icon: BiUserPlus },
-  { name: "Lista de Clientes", href: "/list-users", icon: FiUsers },
+  { name: "Lista de Clientes", href: "/", icon: FiUsers },
 ];
 
 export default function SidebarContent({ onClose, ...rest }: SidebarProps) {

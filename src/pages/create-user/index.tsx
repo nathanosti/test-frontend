@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Ventura Labas - Criar Usuário</title>
+        <title>Venture Labs - Criar Usuário</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

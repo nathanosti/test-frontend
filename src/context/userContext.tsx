@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { UserProps } from "../types/UserTypes";
 
 interface userContext {
@@ -37,18 +37,20 @@ export function UserProvider({ children }: any) {
   const [usersList, setUsersList] = useState<UserProps[]>([]);
 
   function createNewUser(formData: UserProps) {
-    console.log("Entrou createNewUser");
     setUsersList([...usersList, formData]);
-    console.log({ usersList });
     return;
   }
+
+  useEffect(() => {
+    console.log({ usersList });
+  }, [usersList]);
 
   return (
     <>
       <UserContext.Provider
         value={{
-          createNewUser,
           usersList,
+          createNewUser,
         }}
       >
         {children}
