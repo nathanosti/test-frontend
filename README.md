@@ -1,34 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste Front-end Developer
 
-## Getting Started
+<img src="./public/project-example.jpeg" alt="Project Example">
+<img src="./public/project-example2.jpeg" alt="Project Example">
 
-First, run the development server:
+> Projeto desenvolvido como teste para Front-end Developer na VentureLabs
 
-```bash
-npm run dev
-# or
-yarn dev
+### Objetivo
+
+Criar um web app simples de cadastro no formato stepper (Wizard) utilizando React.JS
+
+### Requisitos
+
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+
+- A aplicação deve conter um menu lateral com dois itens ('Novo Cliente' e ' Lista de
+  Clientes')
+- A opção 'Novo Cliente' deve iniciar o formulário no passo 1
+- Passo 1 deve conter os campos: Nome, Sobrenome, E-mail, Telefone
+- Passo 2 deve conter os campos: CEP, Endereço 1, Endereço 2
+- Passo 3 deve conter os campos: Data de Nascimento, CPF, Renda Mensal
+- Passo 4 deve conter uma mensagem de cadastro concluído com sucesso
+- A opção 'Lista de Clientes' deve listar todos os clientes cadastrados
+- Ainda na opção 'Lista de Clientes' deve ser possível clicar em um cliente e visualizar os
+  dados do mesmo
+- Não esqueça de colocar os botões de 'Voltar' em cada Step do formulário
+- Capriche na UX e lembre-se que seu teste pode ser testado em um dispositivo móvel,
+  portanto preocupe-se com a responsividade
+
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+- Você tem instalado na sua máquina `Git, Git Bash(Windows), Nodejs, npm / yarn`
+- Você tem uma máquina `<Windows / Linux / Mac>`
+
+## 🚀 Clonando o repositório
+
+Antes de qualquer coisa é necessário clonar o repositório, para isso em seu terminal navegue até o diretório que deseja salvar o projeto e rode um dos seguintes comandos:
+
+Linux, macOS e Windows:
+
+`HTTPS Mode:`
+
+```
+git clone https://github.com/nathanosti/venture-labs-test.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`SSH Mode:`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+git clone git@github.com:nathanosti/venture-labs-test.git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Acessar pasta após clonar o repositório
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Após clonar é necessário acessar a pasta gerada. Para isso abra seu VS Code ou editor de sua preferência, depois clique em File (Arquivos) > Open Folder (Abrir Pasta) e acesse o diretório aonde você salvou o clone.
 
-## Learn More
+## ➕ Instalando dependências
 
-To learn more about Next.js, take a look at the following resources:
+Para conseguir rodar o projeto localmente, é OBRIGATÓRIO instalar as suas dependências, para isso basta seguir os seguintes passos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dentro da raiz do projeto no mesmo lugar que se encontra o arquivo package.json, rode um dos seguintes comandos pelo terminal:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`Utilizando Yarn`
 
-## Deploy on Vercel
+```
+  yarn
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`Utilizando npm`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+  npm install
+```
+
+## ✨ Rodando projeto local
+
+Agora para conseguir rodar o projeto local após instalar as dependências, ainda dentro da raiz do projeto rode um dos comando pelo terminal:
+
+`Utilizando Yarn`
+
+```
+  yarn dev
+```
+
+`Utilizando npm`
+
+```
+  npm run dev
+```
+
+Após seguir todos esses passos o projeto já está pronto para ser testado. 😄
+
+## 👷  Projeto desenvolvido por - Nathan Osti Miguel 👷 
