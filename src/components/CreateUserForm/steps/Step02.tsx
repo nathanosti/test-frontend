@@ -26,6 +26,7 @@ export default function Step02() {
           validations,
           mask,
         }: InputsArrProps) => (
+< test
           <FormControl key={inputName} isInvalid={errors[inputName] && Boolean(errors[inputName])}>
             <FormLabel htmlFor={inputName}>{label}</FormLabel>
             <Input
