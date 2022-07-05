@@ -28,7 +28,6 @@ export default function Step03() {
           validations,
           mask,
         }: InputsArrProps) => (
-< test
           <FormControl
             key={inputName}
             isInvalid={errors[inputName] && Boolean(errors[inputName])}
@@ -38,7 +37,8 @@ export default function Step03() {
               {inputName === "salary" && (
                 <InputLeftAddon>children=</InputLeftAddon>
               )}
-            <FormLabel htmlFor={inputName}>{label}</FormLabel>
+              <FormLabel htmlFor={inputName}>{label}</FormLabel>
+            </InputGroup>
             <InputGroup>
               {inputName === "salary" && <InputLeftAddon>R$</InputLeftAddon>}
               <Input
