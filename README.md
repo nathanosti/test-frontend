@@ -3,7 +3,7 @@
 <img src="./public/project-example.jpeg" alt="Project Example">
 <img src="./public/project-example2.jpeg" alt="Project Example">
 
-> Projeto desenvolvido como teste para Front-end Developer na VentureLabs
+> Projeto desenvolvido como teste para Front-end Developer
 
 ### Objetivo
 
